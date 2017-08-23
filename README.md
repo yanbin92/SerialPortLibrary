@@ -15,16 +15,20 @@ android RS232串口通信
 		}
 	};
       serialHelper.open();
-      //发送数据给串口上的硬件设备
-      serialHelper.send(..);
-      //--------------------------------
+      //-----------------------------------------
+      
       //其他帮助方法 获取所有串口地址
-      SerialPortFinder mSerialPortFinder= new SerialPortFinder();
+       SerialPortFinder mSerialPortFinder= new SerialPortFinder();
       String[] entryValues = mSerialPortFinder.getAllDevicesPath();
       List<String> allDevices = new ArrayList<String>();
       for (int i = 0; i < entryValues.length; i++) {
 	  allDevices.add(entryValues[i]);
       }
+      //发送数据给串口上的硬件设备
+      serialHelper.send(..);
+      //--------------------------------
+    
+    
       ``` 
       
       
